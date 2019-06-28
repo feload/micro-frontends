@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="BlueButton.js"></script>
+</head>
+<body>
+    <blue-button lang="en"></blue-button>
+    <hr>
+    <button onclick="chng(this)" data-lang="en">Change language</button>
+    <button onclick="chng(this)" data-lang="sp">Cambiar idioma</button>
+    <button onclick="chng(this)" data-lang="du">Sprache ändern</button>
+
+    <script>
+        function chng (evt) {
+            const lang = evt.attributes['data-lang'].nodeValue;
+            document.querySelector('blue-button').setAttribute('lang', lang)
+        }
+    </script>
+</body>
+</html>
